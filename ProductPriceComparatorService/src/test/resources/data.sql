@@ -1,0 +1,15 @@
+-- setup data for product
+INSERT INTO PRODUCT VALUES ('P001', 'Samsung Galaxy S8', 'phone');
+INSERT INTO PRODUCT VALUES ('P002', 'Samsung Galaxy S8+', 'phone');
+INSERT INTO PRODUCT VALUES ('P003', 'Nokia', 'phone');
+INSERT INTO PRODUCT VALUES ('P004', 'Iphone 12 Pro', 'phone');
+
+-- setup data for vendor
+INSERT INTO PRODUCT_VENDOR VALUES ('8ad73165-7b3a-4d66-a2c2-2e86f8836275', 'shoppe', 'https://shopee.vn/');
+INSERT INTO PRODUCT_VENDOR VALUES ('8ad73165-7b3a-4d66-a2c2-2e86f8836276', 'tiki', 'https://tiki.vn/');
+INSERT INTO PRODUCT_VENDOR VALUES ('8ad73165-7b3a-4d66-a2c2-2e86f8836277', 'lazada', 'https://www.lazada.vn/');
+
+-- setup data for product price
+INSERT INTO PRODUCT_PRICE VALUES ('8ad73165-7b3a-4d60-a2c1-2e86f8836275', 300, 'P001', 'SP001', {ts '2021-04-04 18:47:52.69'}, '8ad73165-7b3a-4d66-a2c2-2e86f8836275');
+INSERT INTO PRODUCT_PRICE VALUES ('8ad73165-7b3a-4d61-a2c2-2e86f8836275', 400, 'P001', 'TK001', {ts '2021-04-04 18:47:52.69'}, '8ad73165-7b3a-4d66-a2c2-2e86f8836276');
+INSERT INTO PRODUCT_PRICE VALUES ('8ad73165-7b3a-4d62-a2c3-2e86f8836275', 350, 'P001', 'LZD001', {ts '2021-04-04 18:47:52.69'}, '8ad73165-7b3a-4d66-a2c2-2e86f8836277');

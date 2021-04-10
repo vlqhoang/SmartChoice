@@ -1,0 +1,16 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+
+# Editor-based HTTP Client requests
+/httpRequests/
+
+*/target/
+*.class
+.idea
+*/.idea
+*.iml
+
+.mvn
+*/.mvn 
+*/mvnw*
