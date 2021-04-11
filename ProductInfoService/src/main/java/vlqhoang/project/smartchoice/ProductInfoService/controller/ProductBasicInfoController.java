@@ -42,7 +42,6 @@ public class ProductBasicInfoController {
         List<ProductEntity> searchResults = productInfoService.searchProduct(sanitizedSearchTxt);
 
         // auditing search
-        // TODO split to other method
         if (searchResults.isEmpty()) evtProducerService.sendUserSearchEvt(DTOConverter.convertToSearchEvtDTO(sanitizedSearchTxt, userId));
         searchResults.forEach(searchResult -> evtProducerService
                 .sendUserSearchEvt(DTOConverter.convertToSearchEvtDTO(searchResult, sanitizedSearchTxt, userId)));

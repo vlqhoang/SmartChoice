@@ -19,6 +19,10 @@ public class UserEvtProducerServiceImpl implements UserEvtProducerService {
     @Autowired
     private KafkaTemplate<String, UserSearchEvtDTO> kafkaTemplateProducer;
 
+    /**
+     * Producing search message for auditing purpose to Kafka
+     * @param searchEvtDTO - message DTO
+     */
     @Override
     @Transactional(transactionManager = "userSearchEvtTransactionManager")
     public void sendUserSearchEvt(UserSearchEvtDTO searchEvtDTO) {

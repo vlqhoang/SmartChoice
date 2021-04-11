@@ -16,6 +16,11 @@ public class UserEvtConsumerService {
     @Autowired
     private UserEventRepository userEventRepository;
 
+    /**
+     * Kafka consumer - listening on incoming messages
+     * @param searchEvtDTO - message DTO
+     * @param acknowledgment - for manual committing message
+     */
     @KafkaListener(topics = "evt-usr-search-topic", containerFactory = "userSearchEvtListenerContainerFactory")
     private void searchEvtListener(UserSearchEvtDTO searchEvtDTO, Acknowledgment acknowledgment){
         log.info("User is searching for {}", searchEvtDTO.getSearchStr());
