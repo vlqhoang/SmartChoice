@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "8390097e-3de6-4b3d-a86c-e223dee1c1dc",
+		"name": "SmartChoice - NAB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/product-service/product/detail/P001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"product-service",
+						"product",
+						"detail",
+						"P001"
+					]
+				},
+				"description": "fetching product detail info"
+			},
+			"response": [
+				{
+					"name": "http://localhost:8765/product-service/product/detail/P001",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/product-service/product/detail/P001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"product-service",
+								"product",
+								"detail",
+								"P001"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 09:10:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"productCode\": \"P001\",\n    \"productName\": \"Samsung Galaxy S8\",\n    \"type\": \"phone\",\n    \"image\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "list products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/product-service/product/listAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"product-service",
+						"product",
+						"listAll"
+					]
+				},
+				"description": "listing all products"
+			},
+			"response": [
+				{
+					"name": "list all products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/product-service/product/listAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"product-service",
+								"product",
+								"listAll"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 09:10:30 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"productCode\": \"P001\",\n        \"productName\": \"Samsung Galaxy S8\",\n        \"type\": \"phone\",\n        \"image\": null\n    },\n    {\n        \"productCode\": \"P002\",\n        \"productName\": \"Samsung Galaxy S8+\",\n        \"type\": \"phone\",\n        \"image\": null\n    },\n    {\n        \"productCode\": \"P003\",\n        \"productName\": \"Nokia\",\n        \"type\": \"phone\",\n        \"image\": null\n    },\n    {\n        \"productCode\": \"P004\",\n        \"productName\": \"Iphone 12 Pro\",\n        \"type\": \"phone\",\n        \"image\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get all prices of a product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8765/product-service/product/price/P001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"product-service",
+						"product",
+						"price",
+						"P001"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all prices of a product",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8765/product-service/product/price/P001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"product-service",
+								"product",
+								"price",
+								"P001"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sun, 04 Apr 2021 13:24:24 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"productCode\": \"P001\",\n        \"productName\": \"Samsung Galaxy S8\",\n        \"price\": 300,\n        \"vendorName\": \"shoppe\"\n    },\n    {\n        \"productCode\": \"P001\",\n        \"productName\": \"Samsung Galaxy S8\",\n        \"price\": 400,\n        \"vendorName\": \"tiki\"\n    },\n    {\n        \"productCode\": \"P001\",\n        \"productName\": \"Samsung Galaxy S8\",\n        \"price\": 350,\n        \"vendorName\": \"lazada\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "search for product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:8765/product-service/product/search?searchText=sam&userId=025351864",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8765",
+					"path": [
+						"product-service",
+						"product",
+						"search"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "sam"
+						},
+						{
+							"key": "userId",
+							"value": "025351864"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "search for product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:8765/product-service/product/search?searchText=sam&userId=025351864",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8765",
+							"path": [
+								"product-service",
+								"product",
+								"search"
+							],
+							"query": [
+								{
+									"key": "searchText",
+									"value": "sam"
+								},
+								{
+									"key": "userId",
+									"value": "025351864"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 05 Apr 2021 12:13:51 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"productCode\": \"P001\",\n        \"productName\": \"Samsung Galaxy S8\",\n        \"type\": \"phone\",\n        \"image\": null\n    },\n    {\n        \"productCode\": \"P002\",\n        \"productName\": \"Samsung Galaxy S8+\",\n        \"type\": \"phone\",\n        \"image\": null\n    }\n]"
+				}
+			]
+		}
+	]
+}
