@@ -1,0 +1,40 @@
+@startuml
+node "KafkaBroker"{
+  queue evt_usr_search_topic as kf
+  queue evt_usr_search_topic.DLT as dlt
+}
+
+
+(client)  <-down-> [api-gateway] : sync req/resp
+[api-gateway] <--> [product-service] : sync req/resp
+[product-service] <--> [product-info-service] : sync req/resp
+[product-service] <--> [product-price-comparator-service] : sync req/resp
+[product-price-comparator-service] <-down-> [third-parties] 
+
+
+[discovery-service] as dis
+[api-gateway] --> dis
+[product-service] --> dis
+[product-info-service] --> dis
+[product-price-comparator-service] --> dis
+[event-service] --> dis
+[zipkin] --> dis
+
+[zipkin] as zipkin
+[api-gateway] .....> zipkin
+[product-service] .....> zipkin
+[product-info-service] .....> zipkin
+[product-price-comparator-service] .....> zipkin
+[event-service] .....> zipkin
+
+[product-info-service] ..> kf
+kf ..> [event-service]
+[event-service] ..> dlt
+
+
+database "product_db" as db1
+database "audit_db" as db2
+[product-info-service] <-up--> db1
+[product-price-comparator-service] <-up--> db1
+[event-service] <-up--> db2
+@enduml
