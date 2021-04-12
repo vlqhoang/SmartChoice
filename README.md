@@ -21,7 +21,7 @@ This project applies microservice design pattern to demonstrate a price comparat
 * **Spring cloud config** (Holding configs and distribute them to services).
 * **Devtool** live reload.
 * Simple service managing mechanism with **Spring Actuator**.
-* Distributed event streaming platform with **Kafka**
+* Distributed event streaming platform with **Kafka**, Exactly-Once Semantics
 * Testing with **JUnit5**.
 
 ## Design Patterns Applied
